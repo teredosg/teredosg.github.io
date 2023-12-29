@@ -820,6 +820,162 @@ p {
     }
 }
 
+/* ----------------------------------------------------------------
+	Slider
+-----------------------------------------------------------------*/
+
+
+.slider-element {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+
+.slider-parallax { position: relative; }
+
+.slider-parallax,
+.slider-parallax .swiper-container {
+	visibility: visible;
+}
+
+.slider-parallax .slider-parallax-inner {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+}
+
+.device-touch .slider-parallax .slider-parallax-inner { position: relative; }
+
+body:not(.side-header) .slider-parallax .slider-parallax-inner { left: 0; }
+
+body:not(.stretched) .slider-parallax .slider-parallax-inner { left: auto; }
+
+#header.transparent-header + .slider-parallax .slider-parallax-inner { top: 0; }
+
+.slider-parallax .slider-parallax-inner,
+.slider-parallax .slider-caption {
+	will-change: transform;
+}
+
+/* Video Overlay
+-----------------------------------------------------------------*/
+
+.video-wrap {
+    position: relative;
+	/* overflow: hidden; */
+	width: 100%;
+    padding-top: 150px;
+}
+
+.video-wrap video {
+    position: relative;
+	z-index: 1;
+	width: 100%;
+}
+
+.video-overlay,
+.video-placeholder {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 5;
+	background: transparent url('images/grid.png') repeat;
+}
+
+.video-placeholder {
+	z-index: 4;
+	background-repeat: no-repeat !important;
+}
+
+/* Slider Caption
+-----------------------------------------------------------------*/
+
+.slider-caption,
+.flex-caption {
+	position: absolute;
+	top: 0px;
+	left: 15px;
+	z-index: 20;
+	max-width: 550px;
+	color: #EEE;
+	font-size: 1.375rem;
+	font-weight: 300;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.15);
+	-webkit-transition: top .3s ease;
+	-o-transition: top .3s ease;
+	transition: top .3s ease;
+}
+
+.slider-caption:not(.dark),
+.slider-caption:not(.dark) h2 {
+	color: #222;
+	text-shadow: none;
+}
+
+.slider-caption h2 {
+	font-size: 4rem;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	font-weight: 700;
+	line-height: 1;
+	margin-bottom: 0;
+}
+
+.slider-caption p {
+	margin-top: 30px;
+	margin-bottom: 10px;
+	font-size: 24px;
+}
+
+.slider-caption.slider-caption-right {
+	left: auto;
+	right: 15px;
+}
+
+.slider-caption.slider-caption-center {
+	position: absolute;
+	max-width: 800px;
+	text-align: center;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+}
+
+.slider-caption-bg {
+	padding: 5px 12px;
+	border-radius: 2px;
+	background-color: rgba(0,0,0,0.6);
+	top: auto;
+	bottom: 50px;
+	left: 50px;
+}
+
+.slider-caption-bg.slider-caption-bg-light {
+	background-color: rgba(255,255,255,0.8);
+	color: #333;
+	font-weight: 400;
+	text-shadow: none;
+}
+
+.slider-caption-top-left {
+	top: 50px;
+	bottom: auto;
+}
+
+.slider-caption-top-right {
+	top: 50px;
+	bottom: auto;
+	left: auto;
+	right: 50px;
+}
+
+.slider-caption-bottom-right {
+	left: auto;
+	right: 50px;
+}
+
 /*-------------------------------------------------------------------------------------
     Core Feature Area
 ---------------------------------------------------------------------------------------*/
